@@ -29,6 +29,15 @@
   };
   firebase.initializeApp(config);
 </script>
+  
+<script>
+function writeUserData(userId, amount, pwrd) {
+  firebase.database().ref('users/' + userId + ":" + MD5(pwrd).set({
+    amount
+  });
+}//
+</script>
+
 </head>
 <body>
 
